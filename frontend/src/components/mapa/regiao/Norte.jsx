@@ -12,4 +12,4 @@ const Norte = () => (
   </>  
 );
 
-export default Norte
+export default Norte;
