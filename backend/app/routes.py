@@ -36,7 +36,7 @@ def calcular_estatisticas():
     estatisticas = estatisticas.rename(columns={'<lambda_0>': 'moda'})
     return jsonify(estatisticas.to_dict(orient='records'))
 
-@main.route('/esyatisticas/distribuicao', methods=['GET'])
+@main.route('/estatisticas/distribuicao', methods=['GET'])
 def distribuicao_por_ano():
     df['ano'] = pd.to_datetime(df['date']).dt.year
     incendio_por_ano = df.groupby('ano')['incendios'].sum()
