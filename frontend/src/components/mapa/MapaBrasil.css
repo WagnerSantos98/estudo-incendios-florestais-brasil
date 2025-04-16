@@ -3,12 +3,12 @@
 }
 
 ul#map {
+  background-image: url('../../assets/img/map.gif');
   display: block;
   margin: 0;
   padding: 0;
   width: 570px;
   height: 585px;
-  background-image: url('../../assets/img/map.gif');
 }
 
 ul#map li {
