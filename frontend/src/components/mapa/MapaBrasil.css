@@ -1,25 +1,24 @@
 .active {
-    display: inherit;
-  }
-  
-  ul#map {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 570px;
-    height: 585px;
-    background-image: url('img/map.gif');
-  }
-  
-  ul#map li {
-    display: block;
-    padding: 0;
-    position: absolute;
-  }
-  
-  ul#map li a {
-    display: block;
-    text-decoration: none;
-    position: absolute;
-  }
-  
+  display: inherit;
+}
+
+ul#map {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 570px;
+  height: 585px;
+  background-image: url('../../assets/img/map.gif');
+}
+
+ul#map li {
+  display: block;
+  padding: 0;
+  position: absolute;
+}
+
+ul#map li a {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+}
