@@ -1,0 +1,18 @@
+# Ignora tudo dentro da pasta estudo-incendios-florestais-brasil
+estudo-incendios-florestais-brasil/*
+
+# Mas mantém o arquivo README.md, por exemplo (se existir)
+!estudo-incendios-florestais-brasil/README.md
+
+# Manter também os arquivos do back-end (exceto o venv)
+!estudo-incendios-florestais-brasil/backend/
+!estudo-incendios-florestais-brasil/backend/**/*
+estudo-incendios-florestais-brasil/backend/venv/
+estudo-incendios-florestais-brasil/backend/__pycache__/
+estudo-incendios-florestais-brasil/backend/**/*.pyc
+
+# Manter também o CSV
+!estudo-incendios-florestais-brasil/amazon.csv
+
+# Ignorar node_modules se tiver front-end
+estudo-incendios-florestais-brasil/frontend/node_modules/
