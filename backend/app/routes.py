@@ -32,12 +32,16 @@ def filtrar():
 
 @main.route('/estatisticas/medias', methods=['GET'])
 def calcular_estatisticas():
-    estatisticas = df.groupby('state')['number'].agg(['mean', 'median', lambda x: x.mode()[0]])
-    estatisticas = estatisticas.rename(columns={'<lambda_0>': 'moda'})
+    estado_agrupado = df.groupby('state')['number']
+    estatisticas = pd.DataFrame({
+        'média': estado_agrupado.mean(),
+        'mediana': estado_agrupado.median(),
+        'moda': estado_agrupado.apply(lambda x: x.mode().iloc[0] if not x.mode().empty else None)
+    })
+    estatisticas = estatisticas.round(2)
     return jsonify(estatisticas.to_dict(orient='records'))
 
 @main.route('/estatisticas/distribuicao', methods=['GET'])
 def distribuicao_por_ano():
-    df['ano'] = pd.to_datetime(df['date']).dt.year
     incendio_por_ano = df.groupby('ano')['incendios'].sum()
     return jsonify(incendio_por_ano.to_dict())
