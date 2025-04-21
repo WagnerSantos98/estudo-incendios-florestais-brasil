@@ -13,7 +13,7 @@ export const estadosPorRegiao = {
     //Região Nordeste
     nordeste: [
         { idLi: 'cma', idA: 'ma', nome: 'Maranhão' },
-        { idLi: 'cpia', idA: 'pi', nome: 'Piauí' },
+        { idLi: 'cpi', idA: 'pi', nome: 'Piauí' },
         { idLi: 'cce', idA: 'ce', nome: 'Ceará' },
         { idLi: 'crn', idA: 'rn', nome: 'Rio Grande do Norte' },
         { idLi: 'cpb', idA: 'pb', nome: 'Paraíba' },
