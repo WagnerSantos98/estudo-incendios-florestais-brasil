@@ -2,13 +2,34 @@
   display: inherit;
 }
 
-ul#map {
-  background-image: url('../../assets/img/map.gif');
-  display: block;
-  margin: 0;
-  padding: 0;
+.mapa-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.mapa-wrapper {
   width: 570px;
   height: 585px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+ul#map {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('../../assets/img/map.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
 ul#map li {
@@ -21,4 +42,176 @@ ul#map li a {
   display: block;
   text-decoration: none;
   position: absolute;
+}
+
+ul#map li a img {
+  border: 0;
+  width: inherit;
+  height: inherit;
+}
+
+/* Estilos para hover e active */
+a#pa:hover, a#pa:active, a#am:hover, a#am:active, a#mt:hover, a#mt:active, a#ba:hover, a#ba:active, a#ma:hover, a#ma:active,
+a#mg:hover, a#mg:active, a#to:hover, a#to:active, a#pi:hover, a#pi:active, a#go:hover, a#go:active, a#ms:hover, a#ms:active,
+a#rr:hover, a#rr:active, a#rs:hover, a#rs:active, a#ro:hover, a#ro:active, a#ap:hover, a#ap:active, a#sp:hover, a#sp:active,
+a#ce:hover, a#ce:active, a#pr:hover, a#pr:active, a#ac:hover, a#ac:active, a#sc:hover, a#sc:active, a#es:hover, a#es:active,
+a#rj:hover, a#rj:active, a#pb:hover, a#pb:active, a#pe:hover, a#pe:active, a#rn:hover, a#rn:active, a#se:hover, a#se:active,
+a#al:hover, a#al:active, a#df:hover, a#df:active {
+  display: block;
+  background: url('../../assets/img/sprite.gif') no-repeat;
+}
+
+/* Posições do sprite para cada estado */
+a#pa:hover, a#pa:active { background-position: -10px -0px; width: 188px; height: 187px; }
+a#am:hover, a#am:active { background-position: -10px -197px; width: 258px; height: 181px; }
+a#mt:hover, a#mt:active { background-position: -10px -388px; width: 166px; height: 161px; }
+a#ba:hover, a#ba:active { background-position: -10px -559px; width: 136px; height: 148px; }
+a#ma:hover, a#ma:active { background-position: -156px -559px; width: 102px; height: 139px; }
+a#mg:hover, a#mg:active { background-position: -10px -717px; width: 163px; height: 131px; }
+a#to:hover, a#to:active { background-position: -183px -717px; width: 74px; height: 125px; }
+a#pi:hover, a#pi:active { background-position: -10px -858px; width: 83px; height: 124px; }
+a#go:hover, a#go:active { background-position: -103px -858px; width: 108px; height: 108px; }
+a#ms:hover, a#ms:active { background-position: -103px -976px; width: 106px; height: 104px; }
+a#rr:hover, a#rr:active { background-position: -10px -992px; width: 87px; height: 103px; }
+a#rs:hover, a#rs:active { background-position: -107px -1090px; width: 116px; height: 101px; }
+a#ro:hover, a#ro:active { background-position: -10px -1201px; width: 104px; height: 87px; }
+a#ap:hover, a#ap:active { background-position: -10px -1105px; width: 73px; height: 85px; }
+a#sp:hover, a#sp:active { background-position: -124px -1201px; width: 131px; height: 84px; }
+a#ce:hover, a#ce:active { background-position: -186px -388px; width: 61px; height: 76px; }
+a#pr:hover, a#pr:active { background-position: -124px -1295px; width: 97px; height: 64px; }
+a#ac:hover, a#ac:active { background-position: -10px -1298px; width: 108px; height: 62px; }
+a#sc:hover, a#sc:active { background-position: -128px -1369px; width: 81px; height: 53px; }
+a#es:hover, a#es:active { background-position: -208px -0px; width: 33px; height: 51px; }
+a#rj:hover, a#rj:active { background-position: -186px -474px; width: 58px; height: 40px; }
+a#pb:hover, a#pb:active { background-position: -10px -1370px; width: 59px; height: 35px; }
+a#pe:hover, a#pe:active { background-position: -10px -1415px; width: 97px; height: 34px; }
+a#rn:hover, a#rn:active { background-position: -186px -524px; width: 53px; height: 33px; }
+a#se:hover, a#se:active { background-position: -208px -61px; width: 28px; height: 32px; }
+a#al:hover, a#al:active { background-position: -208px -103px; width: 46px; height: 27px; }
+a#df:hover, a#df:active { background-position: -208px -140px; width: 16px; height: 9px; }
+
+.estatisticas-wrapper {
+  width: 487px;
+  height: 585px;
+}
+
+.estatisticas-card {
+  width: 487px;
+  height: 585px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 2rem;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-section {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-section h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.info-section p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.info-item {
+  background-color: #ffffff;
+  padding: 0.8rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item h4 {
+  font-size: 0.9rem;
+  margin: 0 0 0.3rem 0;
+  color: #000000;
+}
+
+.info-item p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000000;
+}
+
+.estatisticas-card h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.estatisticas-numeros {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.estatistica {
+  text-align: center;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.estatistica h3 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.estatistica p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.grafico {
+  flex: 1;
+  margin-top: 1rem;
+  min-height: 300px;
 }
