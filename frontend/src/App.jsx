@@ -1,4 +1,4 @@
-import MapaBrasil from './components/mapa/MapaBrasil';
+import MapaBrasil from './components/Mapabrasil/MapaBrasil';
 
 function App() {
  
