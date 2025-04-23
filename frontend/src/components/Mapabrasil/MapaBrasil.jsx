@@ -1,10 +1,4 @@
 import './MapaBrasil.css';
-import './EstatisticasCard.css';
-import Norte from './regiao/Norte';
-import Nordeste from './regiao/Nordeste';
-import CentroOeste from './regiao/CentroOeste';
-import Sudeste from './regiao/Sudeste';
-import Sul from './regiao/Sul';
 import { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import {
