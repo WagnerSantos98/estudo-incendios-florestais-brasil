@@ -23,6 +23,10 @@ h3, h4, h5, h6{
   font-weight: 400; 
 }
 
+h3{
+  border-bottom: 2px solid var(--primary-color);
+}
+
 span.info-value{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -62,7 +66,7 @@ body {
   flex-direction: column;
   grid-column: 1;
   grid-row: 1 / span 2;
-  min-height: 1110px;
+  min-height: 1180px;
   height: 100%;
 }
 
@@ -124,6 +128,70 @@ body {
   display: block;
 }
 
+/* Card de ranking */
+.ranking-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  grid-column: 2;
+  grid-row: 2;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  height: 95%;
+  margin-top: -410px;
+}
+
+.ranking-card h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.ranking-item:hover {
+  transform: translateX(5px);
+  background: #e9ecef;
+}
+
+.ranking-position {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #4CAF50;
+  min-width: 40px;
+  text-align: center;
+}
+
+.ranking-estado {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.ranking-total {
+  font-size: 0.9em;
+  color: #666;
+}
 
 /* Card Fonte de Dados (Direito Inferior) */
 .fonte-dados-card {
@@ -131,12 +199,14 @@ body {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   padding: 20px;
+  grid-column: 2;
+  grid-row: 3;
   flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 150px;
-  height: 50%;
-  margin-top: -410px;
+  height: 200px;
+  margin-top: -420px;
 
 }
 
@@ -151,6 +221,10 @@ body {
 .fonte-dados-content {
   flex: 1;
   overflow-y: auto;
+}
+
+.fonte-dados-content span{
+  color: var(--primary-color);
 }
 
 /* Estilos dos Cards */

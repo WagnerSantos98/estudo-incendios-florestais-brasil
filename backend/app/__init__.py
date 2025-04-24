@@ -1,10 +1,13 @@
 from flask import Flask
+from flask_cors import CORS
+from .routes import main
 
 def create_app():
     app = Flask(__name__)
     
-    #Importar as rotas
-    from .routes import main
+    # CORS permissivo: aceita requisições de qualquer origem
+    CORS(app, supports_credentials=True)
+    
     app.register_blueprint(main)
     
     return app

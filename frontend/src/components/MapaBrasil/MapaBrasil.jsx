@@ -42,20 +42,29 @@ const MapaBrasil = () => {
     const [estadoSelecionado, setEstadoSelecionado] = useState(null);
     const [regiaoSelecionada, setRegiaoSelecionada] = useState('');
     const [estadosFiltrados, setEstadosFiltrados] = useState([]);
+    const [rankingEstados, setRankingEstados] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [geralRes, graficoRes, analiseRes] = await Promise.all([
+                const [geralRes, graficoRes, analiseRes, rankingRes] = await Promise.all([
                     axios.get(`${API_URL}/estatisticas/geral`),
                     axios.get(`${API_URL}/estatisticas/grafico`),
-                    axios.get(`${API_URL}/analise/descricao`)
+                    axios.get(`${API_URL}/analise/descricao`),
+                    axios.get(`${API_URL}/ranking/estados`)
                 ]);
 
                 setEstatisticasGeral(geralRes.data);
                 setCurrentData(geralRes.data);
                 setChartData(graficoRes.data);
                 setAnaliseDados(analiseRes.data);
+
+                // Converter o ranking para array e ordenar
+                const rankingArray = Object.entries(rankingRes.data)
+                    .map(([estado, total]) => ({ estado, total }))
+                    .sort((a, b) => b.total - a.total);
+                setRankingEstados(rankingArray);
+
                 setLoading(false);
             } catch (error) {
                 console.error('Erro ao carregar dados:', error);
@@ -280,14 +289,27 @@ const MapaBrasil = () => {
             </div>
 
             {/* Card Fonte de Dados (Direito Inferior) */}
+            <div className="ranking-card">
+                <h3>Ranking de Estados</h3>
+                <div className="ranking-list">
+                    {rankingEstados.slice(0, 5).map((item, index) => (
+                        <div key={item.estado} className="ranking-item">
+                            <span className="ranking-position">{index + 1}º</span>
+                            <span className="ranking-estado">{item.estado}</span>
+                            <span className="ranking-total">{item.total.toLocaleString()} incêndios</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+      {/* Card Fonte de Dados (Direito Inferior) */}
       <div className="fonte-dados-card">
         <h3>Fonte de Dados</h3>
         <div className="fonte-dados-content">
-          <p>Informações sobre a origem dos dados:</p>
           <ul>
-            <li>Fonte principal: INPE (Instituto Nacional de Pesquisas Espaciais)</li>
-            <li>Atualizado em: {new Date().toLocaleDateString()}</li>
-            <li>Dados coletados através de satélites de monitoramento</li>
+            <li>Fonte principal: <span>Kaggle</span></li>
+            <li>Dados referentes ao período de 10 anos: <span>1998 a 2017</span></li>
+            <li>Dados coletados através do: <span>Sistema Brasileiro de Informações Florestais</span></li>
           </ul>
         </div>
       </div>
