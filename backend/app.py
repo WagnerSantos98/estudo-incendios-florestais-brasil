@@ -11,7 +11,7 @@ if __name__ == '__main__':
     if is_dev:
         # Só usa ngrok no ambiente local
         from pyngrok import ngrok, conf
-        conf.get_default().auth_token = "SEU_TOKEN_NGROK"
+        conf.get_default().auth_token = os.environ.get("NGROK_AUTH_TOKEN")
         public_url = ngrok.connect(5000)
         print(f"Sua API local está disponível em: {public_url}")
 
