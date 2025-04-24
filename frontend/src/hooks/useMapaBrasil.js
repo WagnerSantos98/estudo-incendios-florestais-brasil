@@ -93,8 +93,11 @@ export const useMapaBrasil = () => {
         regiaoSelecionada,
         estadosFiltrados,
         rankingEstados,
+        estatisticasGeral,
         handleRegiaoChange,
         handleEstadoChange,
-        getNomeEstado
+        getNomeEstado,
+        setEstadoSelecionado,
+        setCurrentData
     }
 };
