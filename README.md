@@ -12,9 +12,7 @@ Este projeto visa analisar dados de incêndios florestais no Brasil, fornecendo 
 
 ## Demonstração
 
-[![Demonstração da Aplicação](https://img.youtube.com/vi/SEU_ID_DO_VIDEO/0.jpg)](https://www.youtube.com/watch?v=SEU_ID_DO_VIDEO)
-
-![Demonstração da Aplicação](frontend/public/img/forest.gif)
+[![Demonstração da Aplicação](frontend/public/img/forest.gif)]
 
 *Clique na imagem para assistir ao vídeo de demonstração*
 
