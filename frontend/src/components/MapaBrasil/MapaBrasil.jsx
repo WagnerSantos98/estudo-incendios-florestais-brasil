@@ -29,15 +29,6 @@ ChartJS.register(
     Legend
 );
 
-
-const regioes = [
-    { id: 'norte', nome: 'Norte' },
-    { id: 'nordeste', nome: 'Nordeste' },
-    { id: 'centroOeste', nome: 'Centro-Oeste' },
-    { id: 'sudeste', nome: 'Sudeste' },
-    { id: 'sul', nome: 'Sul' }
-];
-
 const MapaBrasil = () => {
     const [currentData, setCurrentData] = useState(null);
     const [chartData, setChartData] = useState(null);
