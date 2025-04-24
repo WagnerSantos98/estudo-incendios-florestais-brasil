@@ -1,5 +1,5 @@
 Flask
+gunicorn
 pandas
 pyngrok
-gunicorn
 flask-cors
