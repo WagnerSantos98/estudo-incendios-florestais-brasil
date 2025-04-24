@@ -4,10 +4,6 @@ from .routes import main
 
 def create_app():
     app = Flask(__name__)
-    
-    # CORS permissivo: aceita requisições de qualquer origem
     CORS(app, supports_credentials=True)
-    
     app.register_blueprint(main)
-    
     return app
