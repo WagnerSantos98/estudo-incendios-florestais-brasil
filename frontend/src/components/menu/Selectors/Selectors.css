@@ -1,0 +1,41 @@
+.select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.select-regiao,
+.select-estado {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    background-color: white;
+    font-size: 1rem;
+    color: #4a5568;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.select-regiao:hover,
+.select-estado:hover {
+    border-color: #48bb78;
+}
+
+.select-regiao:focus,
+.select-estado:focus {
+    outline: none;
+    border-color: #48bb78;
+    box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.1);
+}
+
+.select-estado:disabled {
+    background-color: #f7fafc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+option {
+    padding: 0.5rem;
+} 
