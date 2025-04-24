@@ -43,6 +43,9 @@ estados_map = {
     'SE': 'Sergipe', 'se': 'Sergipe',
     'TO': 'Tocantins', 'to': 'Tocantins'
 }
+@main.route('/api/test', methods=['GET'])
+def test():
+    return "API funcionando!"
 
 @main.route('/')
 def home():
