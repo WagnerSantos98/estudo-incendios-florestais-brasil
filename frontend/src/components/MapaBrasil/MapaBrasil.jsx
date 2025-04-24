@@ -23,7 +23,7 @@ ChartJS.register(
     Legend
 );
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://estudo-incendios-florestais-brasil.onrender.com';
 
 const regioes = [
     { id: 'norte', nome: 'Norte' },
