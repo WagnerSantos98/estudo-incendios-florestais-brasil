@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,7 +12,7 @@ export default defineConfig({
     cors: true,
     proxy: {
       '/api': {
-        target: 'https://estudo-incendios-florestais-brasil.onrender.com',
+        target: process.env.VITE_API_URL,
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, '')
