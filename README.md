@@ -116,6 +116,10 @@ Se as requisições não estiverem funcionando:
 2. Confirme se as portas não estão sendo usadas por outros processos
 3. Tente reiniciar ambos os servidores
 
-## Contribuição
 
-Sinta-se à vontade para contribuir com o projeto através de pull requests ou reportando issues.
+## Desenvolvido por
+Wagner Santos de Jesus
+
+Sinta-se à vontade para entrar em contato e compartilhar feedbacks!
+- LinkedIn: https://www.linkedin.com/in/wagnersjesus/
+- Portfólio: https://wagnersantos.dev.br/
