@@ -1,15 +1,13 @@
-import MapaBrasil from './components/Mapabrasil/MapaBrasil';
+import React from 'react';
+
 
 function App() {
- 
-
-  return(
+  return (
     <div>
       <h1>Mapa Interativo do Brasil</h1>
-      <MapaBrasil/>
+      <MapaBrasil />
     </div>
   );
-    
 }
 
-export default App
+export default App;
