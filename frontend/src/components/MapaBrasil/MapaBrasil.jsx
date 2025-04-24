@@ -11,8 +11,14 @@ import {
     Tooltip,
     Legend
 } from 'chart.js';
-import axios from 'axios';
 import { estadosPorRegiao } from '../../utils/estadosPorRegiao';
+import{
+    getEstatisticasGeral,
+    getEstatisticasGrafico,
+    getAnaliseDescricao,
+    getRankingEstados,
+    getEstatisticasEstado 
+} from '../../services/api'
 
 ChartJS.register(
     CategoryScale,
@@ -23,7 +29,6 @@ ChartJS.register(
     Legend
 );
 
-const API_URL = 'https://estudo-incendios-florestais-brasil.onrender.com';
 
 const regioes = [
     { id: 'norte', nome: 'Norte' },
@@ -48,10 +53,10 @@ const MapaBrasil = () => {
         const fetchData = async () => {
             try {
                 const [geralRes, graficoRes, analiseRes, rankingRes] = await Promise.all([
-                    axios.get(`${API_URL}/estatisticas/geral`),
-                    axios.get(`${API_URL}/estatisticas/grafico`),
-                    axios.get(`${API_URL}/analise/descricao`),
-                    axios.get(`${API_URL}/ranking/estados`)
+                    getEstatisticasGeral(),
+                    getEstatisticasGrafico(),
+                    getAnaliseDescricao(),
+                    getRankingEstados()
                 ]);
 
                 setEstatisticasGeral(geralRes.data);
@@ -91,7 +96,7 @@ const MapaBrasil = () => {
         const estadoId = e.target.value;
         if (estadoId) {
             try {
-                const response = await axios.get(`${API_URL}/estatisticas/estado/${estadoId}`);
+                const response = await getEstatisticasEstado(estadoId);
                 setCurrentData(response.data);
                 setEstadoSelecionado(estadoId);
             } catch (error) {
