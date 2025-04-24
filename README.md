@@ -10,6 +10,12 @@ O objetivo principal deste projeto é construir uma API que forneça dados e est
 
 Este projeto visa analisar dados de incêndios florestais no Brasil, fornecendo estatísticas e visualizações interativas.
 
+## Demonstração
+
+[![Demonstração da Aplicação](https://img.youtube.com/vi/SEU_ID_DO_VIDEO/0.jpg)](https://www.youtube.com/watch?v=SEU_ID_DO_VIDEO)
+
+*Clique na imagem para assistir ao vídeo de demonstração*
+
 ## Estrutura do Projeto
 
 O projeto está dividido em duas partes principais:
